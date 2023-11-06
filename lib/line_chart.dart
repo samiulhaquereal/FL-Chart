@@ -56,6 +56,25 @@ class LineChartPage extends StatelessWidget {
               show: true,
               gradient: _barsGradient,
             ),
+          ),
+          LineChartBarData(
+            spots: [
+              FlSpot(0, 5),
+              FlSpot(2.6, 1),
+              FlSpot(4.9, 3),
+              FlSpot(6.8, 4.5),
+              FlSpot(8, 2),
+              FlSpot(9.5, 1),
+              FlSpot(11, 4.5),
+            ],
+            gradient: _barsGradient2,
+            dotData: FlDotData(show: true,),
+            isCurved: true,
+            barWidth: 3,
+            belowBarData: BarAreaData(
+              show: true,
+              gradient: _barsGradient2,
+            ),
           )
         ]
       ),
@@ -67,6 +86,15 @@ LinearGradient get _barsGradient => LinearGradient(
   colors: [
     const Color(0xFF00d39b).withOpacity(0.5),
     const Color(0xFF22B6E6).withOpacity(0.5),
+  ],
+  begin: Alignment.centerRight,
+  end: Alignment.centerLeft,
+);
+
+LinearGradient get _barsGradient2 => LinearGradient(
+  colors: [
+    const Color(0xffff0000).withOpacity(0.5),
+    const Color(0xFFFF710D).withOpacity(0.5),
   ],
   begin: Alignment.centerRight,
   end: Alignment.centerLeft,
